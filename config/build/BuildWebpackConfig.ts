@@ -3,11 +3,12 @@ import webpack from 'webpack';
 import { buildPlugins } from './buildPlugins';
 import { buildPLoaders } from './buildLoaders';
 import { buildResolvers } from './buildRwsolvers';
+import { buildDevServer } from './buildDevServer';
 
 export function BuildWebpackConfig(
 	options: BuildOptions,
 ): webpack.Configuration {
-	const { paths, mode } = options;
+	const { paths, mode, isDev } = options;
 	return {
 		mode: mode,
 		entry: paths.entry,
@@ -21,5 +22,7 @@ export function BuildWebpackConfig(
 			rules: buildPLoaders(),
 		},
 		resolve: buildResolvers(),
+		devtool: isDev ? 'inline-source-map' : undefined,
+		devServer: isDev ? buildDevServer(options) : undefined,
 	};
 }
