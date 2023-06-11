@@ -5,7 +5,7 @@ import { routerConfig, IRoutesList } from '../routerConfig';
 
 export const AppRouter = () => {
   return (
-    <div className={'page-wrapper'}>
+    <div className={'page-content'}>
       <Suspense fallback={<div>Loading....</div>}>
         <Routes>
             {routerConfig.map(({ path, Component }: IRoutesList) => (

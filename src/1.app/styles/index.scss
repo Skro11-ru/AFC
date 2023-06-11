@@ -14,3 +14,12 @@
 
 	background-color: var(--bg-color);
 }
+
+.page {
+	display: flex;
+}
+
+.page-content {
+	padding: 20px;
+	flex-grow: 1;
+}

@@ -7,13 +7,16 @@ import { AboutPage } from '@src/3.pages/AboutPage';
 import { MainPage } from '@src/3.pages/MainPage';
 import { AppRouter } from '@src/1.app/providers/router';
 import { Navbar } from '@src/4.widgets/Navbar';
-
+import { Sidebar } from '@src/4.widgets/Sidebar';
 export const App = () => {
 	const { theme, toggleTheme } = useTheme();
 	return (
 		<div className={classNames(['app', theme], {})}>
 			<Navbar />
-			<AppRouter />
+			<div className="page">
+				<Sidebar />
+				<AppRouter />
+			</div>
 		</div>
 	);
 };
