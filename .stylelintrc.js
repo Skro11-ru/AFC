@@ -1,19 +1,16 @@
 module.exports = {
 	extends: [
-		'stylelint-config-recommended',
+		// 'stylelint-config-recommended',
 		'stylelint-config-standard-scss',
-		// TODO: конфликт ParseError: Unexpected token global(){}
 		// 'stylelint-prettier/recommended',
 		// 'stylelint-config-html/svelte',
 	],
-	overrides: [
-		{
-			files: ['**/*.svelte'],
-			customSyntax: 'postcss-html',
-			extends: ['stylelint-config-html/svelte'],
-		},
+
+	plugins: [
+		'stylelint-order',
+		// 'stylelint-scss',
+		'stylelint-prettier',
 	],
-	plugins: ['stylelint-order', 'stylelint-scss', 'stylelint-prettier'],
 	rules: {
 		'order/order': [
 			'custom-properties',

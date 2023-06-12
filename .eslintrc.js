@@ -9,6 +9,7 @@ module.exports = {
 		'airbnb',
 		'plugin:sonarjs/recommended',
 		'plugin:unicorn/recommended',
+		'plugin:i18next/recommended',
 		// 'plugin:prettier/recommended',
 		'prettier',
 	],
@@ -25,6 +26,7 @@ module.exports = {
 		// 'prettier',
 		'sonarjs',
 		'unicorn',
+		'i18next',
 	],
 	globals: {
 		__IS_DEV__: true,
@@ -95,5 +97,6 @@ module.exports = {
 		'react/function-component-definition': 'off',
 		'import/extensions': 'off',
 		'no-underscore-dangle': 'off',
+		'i18next/no-literal-string': ['error', { markupOnly: true }],
 	},
 };
