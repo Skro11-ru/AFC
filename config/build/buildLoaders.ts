@@ -37,5 +37,19 @@ export function buildPLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 			'sass-loader',
 		],
 	};
-	return [fileLoader, svgLoader, typescriptLoader, sassLoader];
+
+	const babelLoader = {
+		test: /\.(js|ts|tsx)$/,
+		exclude: /node_modules/,
+		use: {
+			loader: 'babel-loader',
+			options: {
+				presets: ['@babel/preset-env'],
+				plugins: [
+					['i18next-extract', { nsSeparator: '~', locales: ['ru', 'en'] }],
+				],
+			},
+		},
+	};
+	return [fileLoader, svgLoader, babelLoader, typescriptLoader, sassLoader];
 }

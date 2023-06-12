@@ -7,6 +7,7 @@ import {
 	AppButton,
 	AppButtonTheme,
 } from '@src/7.shared/ui/AppButton/components/AppButton';
+import React from 'react';
 
 interface IThemeSwitcherProps {
 	className?: string;
