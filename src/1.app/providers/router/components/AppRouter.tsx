@@ -3,9 +3,8 @@ import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routerConfig, IRoutesList } from '../routerConfig';
 
-export const AppRouter = () => {
-  return (
-    <div className={'page-content'}>
+export const AppRouter = () => (
+    <div className="page-content">
       <Suspense fallback={<div>Loading....</div>}>
         <Routes>
             {routerConfig.map(({ path, Component }: IRoutesList) => (
@@ -19,4 +18,3 @@ export const AppRouter = () => {
       </Suspense>
     </div>
   );
-};

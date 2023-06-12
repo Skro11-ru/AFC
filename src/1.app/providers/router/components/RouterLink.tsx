@@ -4,8 +4,7 @@ import { classNames } from '@src/7.shared/lib/classNames/classNames';
 import { AppLink } from '@src/7.shared/ui/AppLink';
 import { AppLinkTheme } from '@src/7.shared/ui/AppLink/components/AppLink';
 
-export const RouterLink = () => {
-  return (
+export const RouterLink = () => (
     <ul className={classNames(['links'])}>
       {routerConfig.map(({ path, name }: IRoutesList) => (
         <li className={classNames(['link'])}>
@@ -16,4 +15,3 @@ export const RouterLink = () => {
       ))}
     </ul>
   );
-};

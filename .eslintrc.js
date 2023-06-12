@@ -4,54 +4,31 @@ module.exports = {
 		browser: true,
 		node: true,
 	},
-	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint', 'prettier', 'sonarjs', 'unicorn', 'svelte3'],
-	settings: {
-		'svelte3/typescript': true,
-	},
 	extends: [
-		'airbnb-base',
+		'plugin:react/recommended',
+		'airbnb',
 		'plugin:sonarjs/recommended',
 		'plugin:unicorn/recommended',
-		'plugin:prettier/recommended',
+		// 'plugin:prettier/recommended',
 		'prettier',
 	],
-	overrides: [
-		{
-			files: ['*.svelte'],
-			processor: 'svelte3/svelte3',
-			rules: {
-				'import/first': 0,
-				'import/prefer-default-export': 0,
-				'import/no-mutable-exports': 0,
-				'unused-export-let': 0,
-			},
-			extends: [
-				'plugin:@typescript-eslint/recommended',
-			],
-			// parserOptions: {
-			// 	project: ['./tsconfig.json'], // Specify it only for TypeScript files
-			// },
-		},
-		{
-			files: ['*.ts', '*.tsx'],
-			extends: [
-				'plugin:@typescript-eslint/recommended',
-				// 'airbnb-typescript/base',
-			],
-			rules: {
-				'unicorn/filename-case': 0,
-				'no-use-before-define': 'off',
-				'@typescript-eslint/no-use-before-define': ['error'],
-			},
-			// parserOptions: {
-			// 	project: ['./tsconfig.json'], // Specify it only for TypeScript files
-			// },
-		},
-		{
-			files: ['*test.ts'],
-		},
+	parser: '@typescript-eslint/parser',
+
+	parserOptions: {
+		ecmaFeatures: { jsx: true },
+		ecmaVersion: 'latest',
+		sourceType: 'module',
+	},
+
+	plugins: [
+		'@typescript-eslint',
+		// 'prettier',
+		'sonarjs',
+		'unicorn',
 	],
+	globals: {
+		__IS_DEV__: true,
+	},
 	rules: {
 		'no-console': 'off',
 		'max-len': [2, 120],
@@ -64,10 +41,13 @@ module.exports = {
 		'unicorn/filename-case': [
 			'error',
 			{
-				case: 'camelCase',
-				ignore: ['API'],
+				cases: {
+					camelCase: true,
+					pascalCase: true,
+				},
 			},
 		],
+
 		'unicorn/prevent-abbreviations': [
 			'error',
 			{
@@ -90,19 +70,30 @@ module.exports = {
 					obj: false,
 					str: false,
 					mod: false,
+					env: false,
 				},
 			},
 		],
 		'import/prefer-default-export': 'off',
-		'import/extensions': [
-			'error',
-			'ignorePackages',
-			{
-				'': 'never',
-				jsx: 'never',
-				ts: 'never',
-				tsx: 'never',
-			},
+		// 'import/extensions': [
+		// 	'error',
+		// 	'ignorePackages',
+		// 	{
+		// 		'': 'never',
+		// 		jsx: 'never',
+		// 		ts: 'never',
+		// 		tsx: 'never',
+		// 	},
+		// ],
+		'react/jsx-filename-extension': [
+			2,
+			{ extensions: ['.tsx', '.ts', '.js', '.jsx'] },
 		],
+		'no-unused-vars': 'warn',
+		'react/require-default-props': 'off',
+		'react/react-in-jsx-scope': 'off',
+		'react/function-component-definition': 'off',
+		'import/extensions': 'off',
+		'no-underscore-dangle': 'off',
 	},
 };

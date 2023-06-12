@@ -3,20 +3,25 @@ import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './AppButton.module.scss';
 
 export enum AppButtonTheme {
-  CLEAR = 'clear',
-  SECONDARY = 'secondary',
+	CLEAR = 'clear',
+	SECONDARY = 'secondary',
 }
 
 interface IAppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  theme?: AppButtonTheme;
+	className?: string;
+	theme?: AppButtonTheme;
 }
 
 export const AppButton: FC<IAppButtonProps> = (props) => {
-  const { className, children, theme, ...otherProps } = props;
-  return (
-    <button className={classNames([cls.appButton, className??'', cls[theme??'']])} {...otherProps}>
-      {children}
-    </button>
-  );
+	const { className, children, theme, ...otherProps } = props;
+	return (
+		// eslint-disable-next-line react/jsx-props-no-spreading
+		<button
+			type="button"
+			className={classNames([cls.appButton, className ?? '', cls[theme ?? '']])}
+			{...otherProps}
+		>
+			{children}
+		</button>
+	);
 };

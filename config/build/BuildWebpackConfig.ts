@@ -1,5 +1,5 @@
-import { BuildOptions } from './types/config';
 import webpack from 'webpack';
+import { BuildOptions } from './types/config';
 import { buildPlugins } from './buildPlugins';
 import { buildPLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
@@ -10,7 +10,7 @@ export function BuildWebpackConfig(
 ): webpack.Configuration {
 	const { paths, mode, isDev } = options;
 	return {
-		mode: mode,
+		mode,
 		entry: paths.entry,
 		output: {
 			filename: '[name].[contenthash].js',
