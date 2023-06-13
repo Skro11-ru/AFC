@@ -3,6 +3,7 @@ module.exports = {
 		es2022: true,
 		browser: true,
 		node: true,
+		jest: true,
 	},
 	extends: [
 		'plugin:react/recommended',

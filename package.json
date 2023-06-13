@@ -4,7 +4,7 @@
 	"description": "<h1 style=\"text-align: center;\">Advanced Frontend Course</h1>",
 	"main": ".eslintrc.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest --config ./config/jest/jest.config.ts",
 		"start": "webpack serve --env port=3000",
 		"build:dev": "webpack --env mode=development",
 		"build:prod": "webpack --env mode=production",
@@ -70,7 +70,11 @@
 		"typescript": "4.5.5",
 		"webpack": "5.69.1",
 		"webpack-cli": "4.10.0",
-		"webpack-dev-server": "4.7.4"
+		"webpack-dev-server": "4.7.4",
+		"@testing-library/jest-dom": "5.16.2",
+		"@testing-library/react": "12.1.3",
+		"@types/jest": "27.4.1",
+		"jest": "27.5.1"
 	},
 	"dependencies": {
 		"dotenv": "16.0.3",
