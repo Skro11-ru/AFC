@@ -34,7 +34,7 @@ module.exports = {
 	},
 	rules: {
 		'no-console': 'off',
-		'max-len': [2, 120],
+		'max-len': ['error', { code: 120, ignoreComments: true }],
 		'import/no-unresolved': 0,
 		'import/no-extraneous-dependencies': 0,
 		'unicorn/prefer-module': 0,
