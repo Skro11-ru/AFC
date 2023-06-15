@@ -1,7 +1,9 @@
 {
   "aboutPage": "",
+  "buttonReload": "",
   "greeting": "",
   "lang": "",
   "mainPage": "",
+  "messageAfterError": "",
   "notFoundPage": ""
 }

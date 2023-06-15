@@ -26,7 +26,7 @@ export function buildPlugins({
 
 	if (isDev) {
 		plugins.push(
-			new ReactRefreshWebpackPlugin(),
+			new ReactRefreshWebpackPlugin({ overlay: false }),
 			new webpack.HotModuleReplacementPlugin(),
 		);
 	}
