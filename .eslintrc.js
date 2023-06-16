@@ -32,6 +32,14 @@ module.exports = {
 	globals: {
 		__IS_DEV__: true,
 	},
+	overrides: [
+		{
+			files: ['**/src/**/*.test.{ts,tsx}'],
+			rules: {
+				'i18next/no-literal-string': 'off',
+			},
+		},
+	],
 	rules: {
 		'no-console': 'off',
 		'max-len': ['error', { code: 120, ignoreComments: true }],
@@ -98,7 +106,10 @@ module.exports = {
 		'react/function-component-definition': 'off',
 		'import/extensions': 'off',
 		'no-underscore-dangle': 'off',
-		'i18next/no-literal-string': ['error', { markupOnly: true }],
+		'i18next/no-literal-string': [
+			'error',
+			{ markupOnly: true, ignoreAttribute: ['data-testid'] },
+		],
 		'arrow-body-style': 'off',
 	},
 };

@@ -1,4 +1,4 @@
-import { classNames } from './classNames';
+import { classNames } from '@src/7.shared/lib/classNames/classNames';
 
 describe('classNames', () => {
 	test('with only one param', () => {
@@ -6,9 +6,7 @@ describe('classNames', () => {
 	});
 	test('with some params', () => {
 		const expected = 'someClass testClass superClass';
-		expect(classNames(['someClass', 'testClass', 'superClass'])).toBe(
-			'someClass testClass superClass',
-		);
+		expect(classNames([expected])).toBe('someClass testClass superClass');
 	});
 	test('with mods', () => {
 		const expected = 'someClass hovered active';
