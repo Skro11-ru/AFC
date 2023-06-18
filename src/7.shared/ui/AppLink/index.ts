@@ -1,1 +1,1 @@
-export { AppLink } from './components/AppLink';
+export { AppLink } from './AppLink';

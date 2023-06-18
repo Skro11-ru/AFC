@@ -1,8 +1,17 @@
 .appButton {
-  cursor: pointer;
+	all: unset;
+	padding: 5px 10px;
+	color: var(--inverted-primary-color);
+	border: 1px solid #d3d3d3ff;
+	border-radius: 8px;
+	cursor: pointer;
 }
 
 .clear {
-  all: unset;
-  cursor: pointer;
+}
+
+.outline {
+	padding: 10px 15px;
+	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
 }

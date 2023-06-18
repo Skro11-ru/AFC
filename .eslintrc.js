@@ -11,17 +11,18 @@ module.exports = {
 		'plugin:sonarjs/recommended',
 		'plugin:unicorn/recommended',
 		'plugin:i18next/recommended',
-		// 'plugin:prettier/recommended',
 		'prettier',
+		'plugin:storybook/recommended',
 	],
 	parser: '@typescript-eslint/parser',
 
 	parserOptions: {
-		ecmaFeatures: { jsx: true },
+		ecmaFeatures: {
+			jsx: true,
+		},
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-
 	plugins: [
 		'@typescript-eslint',
 		// 'prettier',
@@ -42,7 +43,13 @@ module.exports = {
 	],
 	rules: {
 		'no-console': 'off',
-		'max-len': ['error', { code: 120, ignoreComments: true }],
+		'max-len': [
+			'error',
+			{
+				code: 120,
+				ignoreComments: true,
+			},
+		],
 		'import/no-unresolved': 0,
 		'import/no-extraneous-dependencies': 0,
 		'unicorn/prefer-module': 0,
@@ -58,7 +65,6 @@ module.exports = {
 				},
 			},
 		],
-
 		'unicorn/prevent-abbreviations': [
 			'error',
 			{
@@ -98,7 +104,9 @@ module.exports = {
 		// ],
 		'react/jsx-filename-extension': [
 			2,
-			{ extensions: ['.tsx', '.ts', '.js', '.jsx'] },
+			{
+				extensions: ['.tsx', '.ts', '.js', '.jsx'],
+			},
 		],
 		'no-unused-vars': 'warn',
 		'react/require-default-props': 'off',
@@ -108,7 +116,10 @@ module.exports = {
 		'no-underscore-dangle': 'off',
 		'i18next/no-literal-string': [
 			'error',
-			{ markupOnly: true, ignoreAttribute: ['data-testid'] },
+			{
+				markupOnly: true,
+				ignoreAttribute: ['data-testid', 'to'],
+			},
 		],
 		'arrow-body-style': 'off',
 	},

@@ -1,1 +1,1 @@
-export { AppLoader } from './components/AppLoader';
+export { AppLoader } from './AppLoader';

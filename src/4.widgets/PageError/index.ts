@@ -1,1 +1,1 @@
-export { PageError } from './components/PageError';
+export { PageError } from './PageError';

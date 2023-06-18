@@ -1,11 +1,10 @@
 import { classNames } from '@src/7.shared/lib/classNames/classNames';
 import { AppLink } from '@src/7.shared/ui/AppLink';
-import { AppLinkTheme } from '@src/7.shared/ui/AppLink/components/AppLink';
-import { ThemeSwitcher } from '@src/4.widgets/ThemeSwitcher';
+import { AppLinkTheme } from '@src/7.shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
-import cls from './Navbar.module.scss';
 import { useEffect, useState } from 'react';
 import { AppButton } from '@src/7.shared/ui/AppButton';
+import cls from './Navbar.module.scss';
 
 interface INavbarProps {
 	className?: string;
@@ -17,7 +16,7 @@ export const Navbar = ({ className }: INavbarProps) => {
 	const generateThrow = () => setError(true);
 	useEffect(() => {
 		if (error) {
-			throw new Error();
+			throw new Error('Error App');
 		}
 	}, [error]);
 	return (

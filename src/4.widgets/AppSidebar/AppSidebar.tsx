@@ -2,14 +2,14 @@ import { classNames } from '@src/7.shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { ThemeSwitcher } from '@src/4.widgets/ThemeSwitcher';
 import { LangSwitcher } from '@src/4.widgets/LangSwitcher';
-import cls from './Sidebar.module.scss';
-import { AppButton } from '../../../7.shared/ui/AppButton';
+import { AppButton } from '@src/7.shared/ui/AppButton';
+import cls from './AppSidebar.module.scss';
 
-interface ISidebarProps {
+interface IAppSidebarProps {
 	className?: string;
 }
 
-export const Sidebar = ({ className }: ISidebarProps) => {
+export const AppSidebar = ({ className }: IAppSidebarProps) => {
 	const [collapsed, setCollapsed] = useState(false);
 	const onToggle = () => setCollapsed((prev) => !prev);
 	return (

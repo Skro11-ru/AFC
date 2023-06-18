@@ -5,6 +5,7 @@ import cls from './AppButton.module.scss';
 export enum AppButtonTheme {
 	CLEAR = 'clear',
 	SECONDARY = 'secondary',
+	OUTLINE='outline'
 }
 
 interface IAppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
