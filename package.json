@@ -4,7 +4,10 @@
 	"description": "<h1 style=\"text-align: center;\">Advanced Frontend Course</h1>",
 	"main": ".eslintrc.js",
 	"scripts": {
-		"test": "jest --config ./config/jest/jest.config.ts",
+		"test:unit": "jest --config ./config/jest/jest.config.ts",
+		"test:ui": "npx loki test",
+		"test:ui:ok": "npx loki approve",
+		"test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
 		"start": "webpack serve --env port=3000",
 		"build:dev": "webpack --env mode=development",
 		"build:prod": "webpack --env mode=production",
@@ -13,7 +16,7 @@
 		"lint:css": "npx stylelint \"**/*.scss\"",
 		"lint:css:fix": "npx stylelint \"**/*.scss\" --fix",
 		"storybook": "storybook dev -p 6006 -c ./config/storybook/",
-		"build-storybook": "storybook build"
+		"storybook:build": "storybook build -c ./config/storybook/"
 	},
 	"repository": {
 		"type": "git",

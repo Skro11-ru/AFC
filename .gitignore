@@ -424,3 +424,6 @@ ehthumbs_vista.db
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,svelte,jetbrains+all,visualstudiocode,vue,vuejs,react,astro,strapi,windows,linux
+
+### Custom ###
+/storybook-static
