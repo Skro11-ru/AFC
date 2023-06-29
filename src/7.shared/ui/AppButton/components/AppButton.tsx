@@ -21,8 +21,6 @@ interface IAppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	theme?: AppButtonTheme;
 	square?: boolean;
 	size?: AppButtonSize;
-
-
 }
 
 export const AppButton: FC<IAppButtonProps> = (props) => {
@@ -34,11 +32,14 @@ export const AppButton: FC<IAppButtonProps> = (props) => {
 		size = AppButtonSize.M,
 		...otherProps
 	} = props;
+
 	const mods: Record<string, boolean> = {
-		[cls.theme]: true,
+		[cls[theme!]]: true,
 		[cls.square]: square ?? false,
 		[cls[size]]: !!size, // updated to use double negation to ensure a boolean value
 	};
+	console.log(`########################## AppButton ##### ${42}\n`, mods);
+
 	return (
 		<button
 			type="button"

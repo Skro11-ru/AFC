@@ -24,7 +24,7 @@ export const AppSidebar = ({ className }: IAppSidebarProps) => {
 				<ThemeSwitcher />
 				<LangSwitcher />
 				<AppButton
-					theme={AppButtonTheme.BACKGROUND_INVERTED}
+					theme={AppButtonTheme.CLEAR}
 					className={cls['collapse-button']}
 					data-testid="sidebar-toggle"
 					onClick={onToggle}
