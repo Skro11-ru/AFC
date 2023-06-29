@@ -111,6 +111,7 @@ module.exports = {
 		'no-unused-vars': 'warn',
 		'react/require-default-props': 'off',
 		'react/react-in-jsx-scope': 'off',
+		'react/jsx-props-no-spreading': 'warn',
 		'react/function-component-definition': 'off',
 		'import/extensions': 'off',
 		'no-underscore-dangle': 'off',

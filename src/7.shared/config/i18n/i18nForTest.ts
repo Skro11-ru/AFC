@@ -14,4 +14,4 @@ i18n.use(initReactI18next).init({
 	resources: { ru: { translations: {} } },
 });
 
-export default i18n;
+export default 'i18next';

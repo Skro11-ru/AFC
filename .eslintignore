@@ -4,3 +4,4 @@
 *.css
 *.scss
 /node_modules
+/storybook-static/

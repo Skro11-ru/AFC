@@ -18,4 +18,4 @@ i18n
 		},
 	});
 
-export { default } from 'i18next';
+export default 'i18next';
