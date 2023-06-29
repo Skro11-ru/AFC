@@ -17,30 +17,30 @@ const config: StorybookConfig = {
 	docs: {
 		autodocs: 'tag',
 	},
-	webpackFinal: async (configWebpack) => {
-		// @ts-ignore
-		// eslint-disable-next-line no-param-reassign
-		configWebpack?.resolve?.alias['@src'] = path.resolve(
-			__dirname,
-			'../../src',
-		);
-		configWebpack?.module?.rules?.push(buildCssLoader(true));
-
-		// @ts-ignore
-		// eslint-disable-next-line no-param-reassign
-		configWebpack.module.rules = configWebpack.module.rules.map((rule) => {
-			// @ts-ignore
-			if (/svg/.test(rule.test as string)) {
-				// @ts-ignore
-				return { ...rule, exclude: /\.svg$/i };
-			}
-
-			return rule;
-		});
-
-		configWebpack?.module?.rules?.push(buildSvgLoader());
-
-		return configWebpack;
-	},
+	// webpackFinal: async (configWebpack) => {
+	// 	// @ts-ignore
+	// 	// eslint-disable-next-line no-param-reassign
+	// 	configWebpack?.resolve?.alias['@src'] = path.resolve(
+	// 		__dirname,
+	// 		'../../src',
+	// 	);
+	// 	configWebpack?.module?.rules?.push(buildCssLoader(true));
+	//
+	// 	// @ts-ignore
+	// 	// eslint-disable-next-line no-param-reassign
+	// 	configWebpack.module.rules = configWebpack.module.rules.map((rule) => {
+	// 		// @ts-ignore
+	// 		if (/svg/.test(rule.test as string)) {
+	// 			// @ts-ignore
+	// 			return { ...rule, exclude: /\.svg$/i };
+	// 		}
+	//
+	// 		return rule;
+	// 	});
+	//
+	// 	configWebpack?.module?.rules?.push(buildSvgLoader());
+	//
+	// 	return configWebpack;
+	// },
 };
 export default config;
