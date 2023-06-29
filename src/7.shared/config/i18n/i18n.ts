@@ -17,5 +17,5 @@ i18n
 			escapeValue: false,
 		},
 	});
-
-export default 'i18next';
+// eslint-disable-next-line unicorn/prefer-export-from
+export default i18n;

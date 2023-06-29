@@ -13,5 +13,5 @@ i18n.use(initReactI18next).init({
 
 	resources: { ru: { translations: {} } },
 });
-
-export default 'i18next';
+// eslint-disable-next-line unicorn/prefer-export-from
+export default i18n;
