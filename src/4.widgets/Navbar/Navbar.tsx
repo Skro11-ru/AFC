@@ -22,12 +22,6 @@ export const Navbar = ({ className }: INavbarProps) => {
 	return (
 		<div className={classNames([cls.navbar, className ?? ''])}>
 			<div className={classNames([cls.links])}>
-				<AppLink theme={AppLinkTheme.SECONDARY} to="/">
-					{t('mainPage')}
-				</AppLink>
-				<AppLink theme={AppLinkTheme.SECONDARY} to="/about">
-					{t('aboutPage')}
-				</AppLink>
 				{/* eslint-disable-next-line i18next/no-literal-string */}
 				<AppButton onClick={generateThrow}>Bug</AppButton>
 			</div>

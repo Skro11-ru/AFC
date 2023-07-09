@@ -1,5 +1,6 @@
 {
-	"lang": "RU",
+	"shortLang": "RU",
+	"lang": "Русский",
 	"notFoundPage": "Страница не найдена",
 	"messageAfterError": "Произошла непредвиденная ошибка",
 	"buttonReload": "Обновить страницу"

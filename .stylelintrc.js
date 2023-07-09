@@ -435,7 +435,7 @@ module.exports = {
 		'max-nesting-depth': null,
 		'media-feature-name-no-unknown': true,
 		'media-feature-name-no-vendor-prefix': true,
-		'no-descending-specificity': null,
+		// 'no-descending-specificity': null,
 		'no-duplicate-selectors': true,
 		'no-empty-source': [
 			true,

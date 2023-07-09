@@ -11,7 +11,7 @@ export enum AppButtonTheme {
 }
 
 export enum AppButtonSize {
-	S = 'size-l',
+	S = 'size-s',
 	M = 'size-m',
 	L = 'size-l',
 }

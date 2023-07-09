@@ -1,13 +1,16 @@
 .appButton {
 	all: unset;
-	padding: 5px 10px;
+	padding: 6px 15px;
 	color: var(--inverted-primary-color);
-	border: 1px solid #d3d3d3ff;
-	border-radius: 8px;
+	text-align: center;
 	cursor: pointer;
 }
 
 .clear {
+	padding: 0;
+	background: none;
+	border: none;
+	outline: none;
 }
 
 .outline {
@@ -27,9 +30,11 @@
 }
 
 .square {
+	padding: 0;
+
 	&.size-s {
-		width: var(--font-line-l);
-		height: var(--font-line-l);
+		width: var(--font-line-s);
+		height: var(--font-line-s);
 	}
 
 	&.size-m {
@@ -41,4 +46,16 @@
 		width: var(--font-line-l);
 		height: var(--font-line-l);
 	}
+}
+
+.size-s {
+	font: var(--font-s);
+}
+
+.size-m {
+	font: var(--font-m);
+}
+
+.size-l {
+	font: var(--font-l);
 }

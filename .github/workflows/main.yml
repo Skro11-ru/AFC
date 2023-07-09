@@ -22,13 +22,18 @@ jobs:
       - name: build production project
         run: npm run build:prod
       - name: linting typescript
+        if: always()
         run: npm run lint:js
       - name: linting css
+        if: always()
         run: npm run lint:css
       - name: unit testing
+        if: always()
         run: npm run test:unit
       - name: build storybook
+        if: always()
         run: npm run storybook:build
 #        todo: enable after changing loki to chromatic
 #      - name: screenshot testing
+#        if: always()
 #        run: npm run test:ui:ci

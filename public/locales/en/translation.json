@@ -1,5 +1,6 @@
 {
-	"lang": "EN",
+	"shortLang": "EN",
+	"lang": "English",
 	"notFoundPage": "Page not found",
 	"messageAfterError": "An unexpected error has occurred",
 	"buttonReload": "Refresh the page"
