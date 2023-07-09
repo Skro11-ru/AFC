@@ -1,5 +1,6 @@
 const { promisify } = require('util');
 const { readdir, writeFile } = require('fs');
+// eslint-disable-next-line unicorn/import-style
 const { join: joinPath, relative } = require('path');
 
 const asyncReaddir = promisify(readdir);
