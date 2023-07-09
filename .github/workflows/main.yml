@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
     strategy:
       matrix:
         node-version: [ 17.x ]
@@ -34,6 +34,6 @@ jobs:
         if: always()
         run: npm run storybook:build
 #        todo: enable after changing loki to chromatic
-#      - name: screenshot testing
-#        if: always()
-#        run: npm run test:ui:ci
+      - name: screenshot testing
+        if: always()
+        run: npm run test:ui:ci
