@@ -1,7 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
-import RenderWithTranslation from '@src/7.shared/lib/tests/renderWithTranslation/renderWithTranslation';
-import { AppSidebar } from '../AppSidebar';
 import componentRender from '@src/7.shared/lib/tests/componentRender/componentRender';
+import { AppSidebar } from '../AppSidebar';
 
 describe('Sidebar', () => {
 	test('Test render', () => {

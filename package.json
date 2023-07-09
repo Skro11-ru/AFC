@@ -15,6 +15,7 @@
 		"lint:js:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
 		"lint:css": "npx stylelint \"**/*.scss\"",
 		"lint:css:fix": "npx stylelint \"**/*.scss\" --fix",
+		"check": "npm run test:unit && npm run lint:js && npm run lint:css",
 		"storybook": "storybook dev -p 6006 -c ./config/storybook/",
 		"storybook:build": "storybook build -c ./config/storybook/"
 	},
