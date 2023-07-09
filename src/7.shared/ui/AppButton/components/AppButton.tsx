@@ -38,7 +38,6 @@ export const AppButton: FC<IAppButtonProps> = (props) => {
 		[cls.square]: square ?? false,
 		[cls[size]]: !!size, // updated to use double negation to ensure a boolean value
 	};
-	console.log(`########################## AppButton ##### ${42}\n`, mods);
 
 	return (
 		<button

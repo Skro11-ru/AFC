@@ -7,13 +7,13 @@ import {
 	AppButtonSize,
 	AppButtonTheme,
 } from '@src/7.shared/ui/AppButton/components/AppButton';
-import cls from './AppSidebar.module.scss';
 import { AppLink } from '@src/7.shared/ui/AppLink';
 import { AppLinkTheme } from '@src/7.shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
 import { AppRoutesPaths } from '@src/1.app/providers/router/routerConfig';
 import HomeIcon from '@src/7.shared/assets/icons/home.svg';
 import AboutIcon from '@src/7.shared/assets/icons/about.svg';
+import cls from './AppSidebar.module.scss';
 
 interface IAppSidebarProps {
 	className?: string;
