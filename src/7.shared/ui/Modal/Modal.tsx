@@ -1,7 +1,7 @@
 import { classNames } from '@src/7.shared/lib/classNames/classNames';
-import cls from './Modal.module.scss';
 import React, { ReactNode, useCallback, useEffect, useRef } from 'react';
 import { Portal } from '@src/7.shared/ui/Portal';
+import cls from './Modal.module.scss';
 
 interface IModalProps {
 	className?: string;
@@ -61,7 +61,9 @@ export const Modal = ({
 	return (
 		<Portal>
 			<div className={classNames([cls.modal, className ?? ''], mods)}>
+				{/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
 				<div className={cls.overlay} onClick={closeHandler}>
+					{/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
 					<div className={cls.content} onClick={onContentClick}>
 						{children}
 					</div>

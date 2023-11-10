@@ -2,9 +2,9 @@ import { classNames } from '@src/7.shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import React, { useCallback, useEffect, useState } from 'react';
 import { AppButton } from '@src/7.shared/ui/AppButton';
-import cls from './Navbar.module.scss';
 import { Modal } from '@src/7.shared/ui/Modal';
 import { AppButtonTheme } from '@src/7.shared/ui/AppButton/components/AppButton';
+import cls from './Navbar.module.scss';
 
 interface INavbarProps {
 	className?: string;
