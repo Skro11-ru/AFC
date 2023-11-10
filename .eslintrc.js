@@ -13,6 +13,7 @@ module.exports = {
 		'plugin:i18next/recommended',
 		'prettier',
 		'plugin:storybook/recommended',
+		'plugin:react-hooks/recommended',
 	],
 	parser: '@typescript-eslint/parser',
 
@@ -29,15 +30,17 @@ module.exports = {
 		'sonarjs',
 		'unicorn',
 		'i18next',
+		'react-hooks',
 	],
 	globals: {
 		__IS_DEV__: true,
 	},
 	overrides: [
 		{
-			files: ['**/src/**/*.test.{ts,tsx}'],
+			files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
 			rules: {
 				'i18next/no-literal-string': 'off',
+				'max-len': 'off',
 			},
 		},
 	],
@@ -123,5 +126,8 @@ module.exports = {
 			},
 		],
 		'arrow-body-style': 'off',
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'error',
+		'jsx-a11y/no-static-element-interactions': 'off',
 	},
 };

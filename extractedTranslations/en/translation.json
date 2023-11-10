@@ -1,9 +1,11 @@
 {
+  "Bug": "",
   "aboutPage": "",
   "buttonReload": "",
   "greeting": "",
   "lang": "",
   "mainPage": "",
   "messageAfterError": "",
-  "notFoundPage": ""
+  "notFoundPage": "",
+  "Войти": ""
 }

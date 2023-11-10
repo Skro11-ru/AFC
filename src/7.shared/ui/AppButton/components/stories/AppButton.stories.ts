@@ -29,6 +29,13 @@ export const Clear: Story = {
 	},
 };
 
+export const ClearInverted: Story = {
+	args: {
+		children: 'text',
+		theme: AppButtonTheme.BACKGROUND_INVERTED,
+	},
+};
+
 export const Secondary: Story = {
 	args: {
 		children: 'text',

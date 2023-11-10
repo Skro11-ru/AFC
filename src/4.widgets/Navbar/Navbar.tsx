@@ -1,10 +1,10 @@
 import { classNames } from '@src/7.shared/lib/classNames/classNames';
-import { AppLink } from '@src/7.shared/ui/AppLink';
-import { AppLinkTheme } from '@src/7.shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { AppButton } from '@src/7.shared/ui/AppButton';
 import cls from './Navbar.module.scss';
+import { Modal } from '@src/7.shared/ui/Modal';
+import { AppButtonTheme } from '@src/7.shared/ui/AppButton/components/AppButton';
 
 interface INavbarProps {
 	className?: string;
@@ -19,12 +19,25 @@ export const Navbar = ({ className }: INavbarProps) => {
 			throw new Error('Error App');
 		}
 	}, [error]);
+	const [isAuthModal, setIsAuthModal] = React.useState(false);
+
+	const toggleModal = useCallback(() => {
+		setIsAuthModal((prev) => !prev);
+	}, []);
+
 	return (
 		<div className={classNames([cls.navbar, className ?? ''])}>
 			<div className={classNames([cls.links])}>
 				{/* eslint-disable-next-line i18next/no-literal-string */}
-				<AppButton onClick={generateThrow}>Bug</AppButton>
+				<AppButton onClick={generateThrow}>{t('Bug')}</AppButton>
+				<AppButton theme={AppButtonTheme.CLEAR_INVERTED} onClick={toggleModal}>
+					{t('Войти')}
+				</AppButton>
 			</div>
+			{/* eslint-disable-next-line i18next/no-literal-string */}
+			<Modal isOpen={isAuthModal} onClose={toggleModal}>
+				pass
+			</Modal>
 		</div>
 	);
 };
