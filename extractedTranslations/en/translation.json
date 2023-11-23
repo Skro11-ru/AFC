@@ -1,11 +1,13 @@
 {
-  "Bug": "",
-  "aboutPage": "",
-  "buttonReload": "",
-  "greeting": "",
-  "lang": "",
-  "mainPage": "",
-  "messageAfterError": "",
-  "notFoundPage": "",
-  "Войти": ""
+	"Bug": "",
+	"aboutPage": "",
+	"buttonReload": "",
+	"decrement": "",
+	"increment": "",
+	"greeting": "",
+	"lang": "",
+	"mainPage": "",
+	"messageAfterError": "",
+	"notFoundPage": "",
+	"Войти": ""
 }

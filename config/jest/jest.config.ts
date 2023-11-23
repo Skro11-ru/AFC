@@ -6,6 +6,9 @@
 import path from 'node:path';
 
 export default {
+	globals: {
+		__IS_DEV__: true,
+	},
 	rootDir: '../../',
 	clearMocks: true,
 	testEnvironment: 'jsdom',
