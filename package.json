@@ -4,6 +4,8 @@
 	"description": "<h1 style=\"text-align: center;\">Advanced Frontend Course</h1>",
 	"main": ".eslintrc.js",
 	"scripts": {
+		"start": "webpack serve --env port=3000",
+		"start:dev:server": "node ./json-server/index.js",
 		"test:unit": "jest --config ./config/jest/jest.config.ts",
 		"test:ui": "npx loki test",
 		"test:ui:ok": "npx loki approve",
@@ -12,7 +14,6 @@
 		"test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
 		"test:ui:open": "open .loki/report.html",
 		"test:ui:report": "npm run test:ui:json && npm run test:ui:html && npm run test:ui:open",
-		"start": "webpack serve --env port=3000",
 		"build:dev": "webpack --env mode=development",
 		"build:prod": "webpack --env mode=production",
 		"lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\"",
@@ -35,6 +36,7 @@
 	},
 	"homepage": "https://github.com/Skro11-ru/AFC#readme",
 	"devDependencies": {
+		"json-server": "^0.17.0",
 		"@babel/core": "7.17.5",
 		"@babel/preset-env": "7.16.11",
 		"@babel/preset-react": "7.16.7",
