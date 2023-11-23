@@ -1,10 +1,10 @@
 import { classNames } from '@src/7.shared/lib/classNames/classNames';
 import { AppButton } from '@src/7.shared/ui/AppButton';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import cls from './Counter.module.scss';
 import { counterActions } from './model/slice/counterSlice';
 import { getCounterValue } from './model/selectors/getCounterValue/getCounterValue';
-import { useTranslation } from 'react-i18next';
 
 interface ICounterProps {
 	className?: string;

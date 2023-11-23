@@ -1,13 +1,13 @@
 {
-	"Bug": "",
-	"aboutPage": "",
-	"buttonReload": "",
-	"decrement": "",
-	"increment": "",
-	"greeting": "",
-	"lang": "",
-	"mainPage": "",
-	"messageAfterError": "",
-	"notFoundPage": "",
-	"Войти": ""
+  "Bug": "",
+  "aboutPage": "",
+  "buttonReload": "",
+  "decrement": "",
+  "greeting": "",
+  "increment": "",
+  "lang": "",
+  "mainPage": "",
+  "messageAfterError": "",
+  "notFoundPage": "",
+  "Войти": ""
 }
