@@ -62,7 +62,7 @@ export const Modal = ({
 
 	return (
 		<Portal>
-			<div className={classNames([cls.modal, className ?? '', theme], mods)}>
+			<div className={classNames([cls.modal, className ?? ''], mods)}>
 				{/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
 				<div className={cls.overlay} onClick={closeHandler}>
 					{/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
