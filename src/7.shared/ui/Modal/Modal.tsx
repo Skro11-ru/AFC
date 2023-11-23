@@ -1,6 +1,7 @@
 import { classNames } from '@src/7.shared/lib/classNames/classNames';
 import React, { ReactNode, useCallback, useEffect, useRef } from 'react';
 import { Portal } from '@src/7.shared/ui/Portal';
+import { useTheme } from '@src/1.app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 
 interface IModalProps {
@@ -23,6 +24,7 @@ export const Modal = ({
 }: IModalProps) => {
 	const [isClosing, setIsClosing] = React.useState(false);
 	const timeRef = useRef<ReturnType<typeof setTimeout>>();
+	const { theme } = useTheme();
 
 	const mods: Record<string, boolean> = {
 		[cls.opened]: isOpen,
@@ -60,7 +62,7 @@ export const Modal = ({
 
 	return (
 		<Portal>
-			<div className={classNames([cls.modal, className ?? ''], mods)}>
+			<div className={classNames([cls.modal, className ?? '', theme], mods)}>
 				{/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
 				<div className={cls.overlay} onClick={closeHandler}>
 					{/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
