@@ -7,7 +7,7 @@ import { AppInput } from '../AppInput';
 type Story = StoryObj<typeof AppInput>;
 
 const meta: Meta<typeof AppInput> = {
-	title: 'widgets/AppInput',
+	title: 'shared/AppInput',
 	component: AppInput,
 	tags: ['autodocs'],
 	argTypes: {},
@@ -16,10 +16,14 @@ const meta: Meta<typeof AppInput> = {
 export default meta;
 
 export const Light: Story = {
-	args: {},
+	args: {
+		value: 'some value',
+	},
 };
 
 export const Dark: Story = {
-	args: {},
+	args: {
+		value: 'some value',
+	},
 	decorators: [themeDecorator(Theme.DARK)],
 };

@@ -7,7 +7,7 @@ import { LoginForm } from '../LoginForm';
 type Story = StoryObj<typeof LoginForm>;
 
 const meta: Meta<typeof LoginForm> = {
-	title: 'widgets/LoginForm',
+	title: 'features /LoginForm',
 	component: LoginForm,
 	tags: ['autodocs'],
 	argTypes: {},
