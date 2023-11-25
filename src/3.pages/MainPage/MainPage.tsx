@@ -3,6 +3,7 @@ import { Counter } from '@src/6.entities/Counter';
 
 const MainPage = () => {
 	const { t } = useTranslation('main');
+
 	return (
 		<div>
 			{t('mainPage')}

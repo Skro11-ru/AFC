@@ -9,6 +9,7 @@ interface IModalProps {
 	children?: ReactNode;
 	isOpen: boolean;
 	onClose?: () => void;
+	lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
@@ -21,10 +22,18 @@ export const Modal = ({
 	children,
 	onClose,
 	isOpen,
+	lazy,
 }: IModalProps) => {
 	const [isClosing, setIsClosing] = React.useState(false);
+	const [mounted, setMounted] = React.useState(false);
 	const timeRef = useRef<ReturnType<typeof setTimeout>>();
 	const { theme } = useTheme();
+
+	useEffect(() => {
+		if (isOpen) {
+			setMounted(true);
+		}
+	}, [isOpen]);
 
 	const mods: Record<string, boolean> = {
 		[cls.opened]: isOpen,
@@ -60,6 +69,9 @@ export const Modal = ({
 		};
 	}, [isOpen, onKeyDown]);
 
+	if (lazy && !mounted) {
+		return null;
+	}
 	return (
 		<Portal>
 			<div className={classNames([cls.modal, className ?? ''], mods)}>

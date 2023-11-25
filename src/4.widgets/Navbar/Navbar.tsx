@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { AppButton } from '@src/7.shared/ui/AppButton';
 import { Modal } from '@src/7.shared/ui/Modal';
 import { AppButtonTheme } from '@src/7.shared/ui/AppButton/components/AppButton';
+import { LoginModal } from '@src/5.features/AuthByUsername';
 import cls from './Navbar.module.scss';
 
 interface INavbarProps {
@@ -21,8 +22,12 @@ export const Navbar = ({ className }: INavbarProps) => {
 	}, [error]);
 	const [isAuthModal, setIsAuthModal] = React.useState(false);
 
-	const toggleModal = useCallback(() => {
-		setIsAuthModal((prev) => !prev);
+	const onCloseModal = useCallback(() => {
+		setIsAuthModal(false);
+	}, []);
+
+	const onOpenModal = useCallback(() => {
+		setIsAuthModal(true);
 	}, []);
 
 	return (
@@ -30,14 +35,12 @@ export const Navbar = ({ className }: INavbarProps) => {
 			<div className={classNames([cls.links])}>
 				{/* eslint-disable-next-line i18next/no-literal-string */}
 				<AppButton onClick={generateThrow}>{t('Bug')}</AppButton>
-				<AppButton theme={AppButtonTheme.CLEAR_INVERTED} onClick={toggleModal}>
+				<AppButton theme={AppButtonTheme.CLEAR_INVERTED} onClick={onOpenModal}>
 					{t('Войти')}
 				</AppButton>
 			</div>
 			{/* eslint-disable-next-line i18next/no-literal-string */}
-			<Modal isOpen={isAuthModal} onClose={toggleModal}>
-				pass
-			</Modal>
+				<LoginModal onClose={onCloseModal} isOpen={isAuthModal} />
 		</div>
 	);
 };

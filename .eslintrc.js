@@ -130,5 +130,6 @@ module.exports = {
 		'react-hooks/exhaustive-deps': 'error',
 		'jsx-a11y/no-static-element-interactions': 'off',
 		'no-param-reassign': 'off',
+		'unicorn/no-null': 'off',
 	},
 };
