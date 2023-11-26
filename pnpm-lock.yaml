@@ -166,6 +166,9 @@ devDependencies:
   html-webpack-plugin:
     specifier: 5.5.0
     version: 5.5.0(webpack@5.69.1)
+  husky:
+    specifier: ^7.0.0
+    version: 7.0.0
   identity-obj-proxy:
     specifier: 3.0.0
     version: 3.0.0
@@ -10225,6 +10228,12 @@ packages:
   /human-signals@4.3.1:
     resolution: {integrity: sha512-nZXjEF2nbo7lIw3mgYjItAfgQXog3OjJogSbKa2CQIIvSGWcKgeJnQlNXip6NglNzYH45nSRiEVimMvYL8DDqQ==}
     engines: {node: '>=14.18.0'}
+    dev: true
+
+  /husky@7.0.0:
+    resolution: {integrity: sha512-xK7lO0EtSzfFPiw+oQncQVy/XqV7UVVjxBByc+Iv5iK3yhW9boDoWgvZy3OGo48QKg/hUtZkzz0hi2HXa0kn7w==}
+    engines: {node: '>=12'}
+    hasBin: true
     dev: true
 
   /i18next-browser-languagedetector@6.1.3:
