@@ -26,7 +26,15 @@ export function buildPLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 			options: {
 				presets: ['@babel/preset-env'],
 				plugins: [
-					['i18next-extract', { nsSeparator: '~', locales: ['ru', 'en'] }],
+					[
+						'i18next-extract',
+						{
+							locales: ['en', 'ru'],
+							defaultNS: 'translation',
+							outputPath: 'public/locales/{{locale}}/{{ns}}.json',
+							keyAsDefaultValue: true,
+						},
+					],
 				],
 			},
 		},

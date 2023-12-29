@@ -1,7 +1,22 @@
 {
-	"shortLang": "EN",
-	"lang": "English",
-	"notFoundPage": "Page not found",
-	"messageAfterError": "An unexpected error has occurred",
-	"buttonReload": "Refresh the page"
+  "Bug": "Bug",
+  "Login": "Login",
+  "aboutPage": "aboutPage",
+  "authorisationError": "authorisationError",
+  "authorizationForm": "Authorization form",
+  "bear": "bear",
+  "buttonReload": "Refresh the page",
+  "cold": "cold",
+  "decrement": "decrement",
+  "enterLogin": "Enter login",
+  "enterPassword": "Enter password",
+  "increment": "increment",
+  "lang": "English",
+  "login": "login",
+  "logout": "logout",
+  "mainPage": "mainPage",
+  "messageAfterError": "An unexpected error has occurred",
+  "notFoundPage": "Page not found",
+  "shortLang": "EN",
+  "Войти": "Войти"
 }

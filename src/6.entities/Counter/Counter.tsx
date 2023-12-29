@@ -11,7 +11,7 @@ interface ICounterProps {
 }
 
 export const Counter = ({ className }: ICounterProps) => {
-	const { t } = useTranslation('translation');
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	const counterValue = useSelector(getCounterValue);
 	const increment = () => {

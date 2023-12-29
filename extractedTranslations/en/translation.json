@@ -1,13 +1,7 @@
 {
-  "Bug": "",
-  "aboutPage": "",
-  "buttonReload": "",
-  "decrement": "",
-  "greeting": "",
-  "increment": "",
-  "lang": "",
-  "mainPage": "",
-  "messageAfterError": "",
-  "notFoundPage": "",
-  "Войти": ""
+  "authorisationError": "",
+  "authorizationForm": "",
+  "enterLogin": "",
+  "enterPassword": "",
+  "login": ""
 }

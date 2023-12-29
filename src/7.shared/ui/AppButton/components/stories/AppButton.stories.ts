@@ -135,3 +135,12 @@ export const SquareSizeL: Story = {
 	},
 	decorators: [themeDecorator(Theme.DARK)],
 };
+
+export const Disabled: Story = {
+	args: {
+		children: '>',
+		theme: AppButtonTheme.OUTLINE,
+		disabled: true,
+	},
+	decorators: [themeDecorator(Theme.DARK)],
+};

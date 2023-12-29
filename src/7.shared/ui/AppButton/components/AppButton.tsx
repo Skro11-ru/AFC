@@ -22,6 +22,7 @@ interface IAppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	theme?: AppButtonTheme;
 	square?: boolean;
 	size?: AppButtonSize;
+	disabled?: boolean;
 }
 
 export const AppButton: FC<IAppButtonProps> = (props) => {
@@ -31,19 +32,22 @@ export const AppButton: FC<IAppButtonProps> = (props) => {
 		theme,
 		square = false,
 		size = AppButtonSize.M,
+		disabled,
 		...otherProps
 	} = props;
 
 	const mods: Record<string, boolean> = {
 		[cls[theme!]]: true,
 		[cls.square]: square ?? false,
-		[cls[size]]: !!size, // updated to use double negation to ensure a boolean value
+		[cls[size]]: !!size,
+		[cls.disabled]: disabled ?? false,
 	};
 
 	return (
 		<button
 			type="button"
 			className={classNames([cls.appButton, className ?? ''], mods)}
+			disabled={disabled}
 			// eslint-disable-next-line react/jsx-props-no-spreading
 			{...otherProps}
 		>

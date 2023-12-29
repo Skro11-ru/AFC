@@ -1,4 +1,6 @@
 {
-	"mainPage": "Main",
-	"aboutPage": "About"
+  "aboutPage": "About",
+  "login": "login",
+  "logout": "logout",
+  "mainPage": "Main"
 }

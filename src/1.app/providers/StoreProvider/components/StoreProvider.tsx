@@ -9,7 +9,7 @@ interface StorageProviderProps {
 	initialState?: DeepPartial<StateSchema>;
 }
 
-export const StorageProvider: FC<StorageProviderProps> = ({
+export const StoreProvider: FC<StorageProviderProps> = ({
 	children,
 	initialState,
 }) => {

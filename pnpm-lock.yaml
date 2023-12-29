@@ -6,8 +6,11 @@ settings:
 
 dependencies:
   '@reduxjs/toolkit':
-    specifier: ^1.8.0
+    specifier: 1.8.0
     version: 1.8.0(react-redux@7.2.6)(react@17.0.2)
+  axios:
+    specifier: ^0.26.1
+    version: 0.26.1
   dotenv:
     specifier: 16.0.3
     version: 16.0.3
@@ -30,7 +33,7 @@ dependencies:
     specifier: 11.15.5
     version: 11.15.5(i18next@21.6.11)(react-dom@17.0.2)(react@17.0.2)
   react-redux:
-    specifier: ^7.2.6
+    specifier: 7.2.6
     version: 7.2.6(react-dom@17.0.2)(react@17.0.2)
   react-router-dom:
     specifier: 6.2.1
@@ -167,8 +170,8 @@ devDependencies:
     specifier: 5.5.0
     version: 5.5.0(webpack@5.69.1)
   husky:
-    specifier: ^7.0.0
-    version: 7.0.0
+    specifier: ^8.0.0
+    version: 8.0.0
   identity-obj-proxy:
     specifier: 3.0.0
     version: 3.0.0
@@ -7066,6 +7069,14 @@ packages:
       - debug
     dev: true
 
+  /axios@0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
+    dependencies:
+      follow-redirects: 1.15.2(debug@4.3.4)
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query@2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
     dev: true
@@ -8250,7 +8261,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-    dev: true
 
   /decamelize-keys@1.1.1:
     resolution: {integrity: sha512-WiPxgEirIV0/eIOMcnFBA3/IJZAZqKnwAwWyvvdi4lsr1WCN22nhdf/3db3DoZcUjTV2SqfzIwNyp6y2xs3nmg==}
@@ -9531,7 +9541,6 @@ packages:
         optional: true
     dependencies:
       debug: 4.3.4
-    dev: true
 
   /for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -10230,9 +10239,9 @@ packages:
     engines: {node: '>=14.18.0'}
     dev: true
 
-  /husky@7.0.0:
-    resolution: {integrity: sha512-xK7lO0EtSzfFPiw+oQncQVy/XqV7UVVjxBByc+Iv5iK3yhW9boDoWgvZy3OGo48QKg/hUtZkzz0hi2HXa0kn7w==}
-    engines: {node: '>=12'}
+  /husky@8.0.0:
+    resolution: {integrity: sha512-4qbE/5dzNDNxFEkX9MNRPKl5+omTXQzdILCUWiqG/lWIAioiM5vln265/l6I2Zx8gpW8l1ukZwGQeCFbBZ6+6w==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
@@ -12223,7 +12232,6 @@ packages:
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
-    dev: true
 
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}

@@ -5,7 +5,7 @@ import { Counter } from '../Counter';
 
 describe('Counter', () => {
 	const selector = 'value-title';
-	test('Test render', () => {
+	test('render', () => {
 		componentRender(<Counter />, {
 			initialState: {
 				counter: {
@@ -16,7 +16,7 @@ describe('Counter', () => {
 		expect(screen.getByTestId(selector)).toHaveTextContent('10');
 	});
 
-	test('Increment', () => {
+	test('increment', () => {
 		componentRender(<Counter />, {
 			initialState: {
 				counter: {
@@ -28,7 +28,7 @@ describe('Counter', () => {
 		expect(screen.getByTestId(selector)).toHaveTextContent('11');
 	});
 
-	test('Increment', () => {
+	test('decrement', () => {
 		componentRender(<Counter />, {
 			initialState: {
 				counter: {

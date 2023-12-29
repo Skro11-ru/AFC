@@ -1,7 +1,20 @@
 {
-	"shortLang": "RU",
-	"lang": "Русский",
-	"notFoundPage": "Страница не найдена",
-	"messageAfterError": "Произошла непредвиденная ошибка",
-	"buttonReload": "Обновить страницу"
+  "Bug": "Bug",
+  "Login": "Login",
+  "aboutPage": "О сайте",
+  "authorisationError": "Ошибка авторизации",
+  "authorizationForm": "Форма авторизации",
+  "buttonReload": "Обновить страницу",
+  "decrement": "уменьшение",
+  "enterLogin": "Введите логин",
+  "enterPassword": "Введите пароль",
+  "increment": "увеличение",
+  "lang": "Русский",
+  "login": "Войти",
+  "logout": "logout",
+  "mainPage": "mainPage",
+  "messageAfterError": "Произошла непредвиденная ошибка",
+  "notFoundPage": "Страница не найдена",
+  "shortLang": "RU",
+  "Войти": "Войти"
 }
