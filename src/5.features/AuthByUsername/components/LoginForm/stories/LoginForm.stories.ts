@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { themeDecorator } from '@src/7.shared/config/storybook/themeDecorator/themeDecorator';
 import { Theme } from '@src/1.app/providers/ThemeProvider';
-import { LoginForm } from '../LoginForm';
+import LoginForm from '../LoginForm';
 
 type Story = StoryObj<typeof LoginForm>;
 

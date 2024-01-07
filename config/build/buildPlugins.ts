@@ -29,7 +29,11 @@ export function buildPlugins({
 		plugins.push(
 			new ReactRefreshWebpackPlugin({ overlay: false }),
 			new webpack.HotModuleReplacementPlugin(),
-			new BundleAnalyzerPlugin({ openAnalyzer: false }),
+			new BundleAnalyzerPlugin({
+				openAnalyzer: false,
+				analyzerHost: 'localhost',
+				analyzerPort: 'auto',
+			}),
 		);
 	}
 	return plugins;
