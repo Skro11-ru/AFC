@@ -1,4 +1,4 @@
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import path from 'node:path';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
@@ -27,14 +27,23 @@ export default ({ config }: { config: webpack.Configuration }) => {
 		return rule;
 	});
 
-	// @ts-ignore
-	config.module.rules.push(
-		{
-			test: /\.svg$/,
-			use: ['@svgr/webpack'],
-		},
-		buildCssLoader(true),
-	);
+	if (config.module?.rules) {
+		config.module.rules.push(
+			{
+				test: /\.svg$/,
+				use: ['@svgr/webpack'],
+			},
+			buildCssLoader(true),
+		);
+	}
+
+	if (config.plugins) {
+		config.plugins.push(
+			new DefinePlugin({
+				__IS_DEV__: true,
+			}),
+		);
+	}
 
 	return config;
 };
