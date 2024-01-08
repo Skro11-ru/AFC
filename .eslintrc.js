@@ -131,5 +131,6 @@ module.exports = {
 		'jsx-a11y/no-static-element-interactions': 'off',
 		'no-param-reassign': 'off',
 		'unicorn/no-null': 'off',
+		'unicorn/no-useless-undefined': 'off',
 	},
 };
